@@ -19,6 +19,14 @@ struct ContentView: View {
         .onReceive(timer) { time in
             currentTime = time
         }
+        .onAppear {
+            // iOSでスリープを無効化（アイドルタイマーを無効化）
+            UIApplication.shared.isIdleTimerDisabled = true
+        }
+        .onDisappear {
+            // iOSでスリープを再有効化
+            UIApplication.shared.isIdleTimerDisabled = false
+        }
     }
 }
 
