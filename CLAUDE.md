@@ -1,28 +1,43 @@
 # CLAUDE.md
-必ず日本語で回答してください。
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+必ず日本語で回答してください。
+
 ## Project Overview
-This is an iOS project called "tick-ios". The repository is currently empty and appears to be in initial setup phase.
+This is an iOS project called "tick" built with SwiftUI. The project uses standard iOS development patterns with a simple app structure.
 
-## Development Setup
-Once the iOS project is initialized, typical development commands will likely include:
+## Development Environment
+- **Xcode**: 16.4 (Build version 16F6)
+- **Swift**: 6.1.2 (Project uses Swift 6.0)
+- **iOS Deployment Target**: 18.5
+- **macOS Deployment Target**: 15.5
+- **visionOS Deployment Target**: 2.5
 
-- **Build**: Use Xcode to build the project, or `xcodebuild` from command line
-- **Run**: Use Xcode simulator or device deployment
-- **Test**: Use Xcode's test runner or `xcodebuild test` command
+## Development Commands
+
+### Build and Run
+- **Build**: `cd tick && xcodebuild -scheme tick -configuration Debug build`
+- **Run**: Use Xcode to run on simulator or device (`⌘+R`)
+- **Clean**: `cd tick && xcodebuild -scheme tick clean`
+
+### Testing
+- **Run Tests**: `cd tick && xcodebuild -scheme tick test -destination 'platform=iOS Simulator,name=iPhone 15'`
+- **Run Unit Tests**: `cd tick && xcodebuild -scheme tick -only-testing:tickTests test`
+- **Run UI Tests**: `cd tick && xcodebuild -scheme tick -only-testing:tickUITests test`
+
+### Project Structure
+The project follows standard iOS app structure within the `tick/` directory:
+- `tick/tick/` - Main application source code
+  - `tickApp.swift` - Main app entry point using SwiftUI App protocol
+  - `ContentView.swift` - Main view displaying "Hello, world!" with globe icon
+  - `Assets.xcassets/` - Asset catalog for images and colors
+  - `tick.entitlements` - App entitlements configuration
+- `tick/tickTests/` - Unit tests using Swift Testing framework
+- `tick/tickUITests/` - UI tests for interface testing
 
 ## Architecture Notes
-The project structure will be established once the iOS project files are created. This will typically include:
-- Xcode project/workspace files (.xcodeproj or .xcworkspace)
-- Swift source files
-- Storyboards/XIBs or SwiftUI views
-- Asset catalogs
-- Info.plist configuration
-
-## Next Steps
-This CLAUDE.md should be updated once the actual iOS project structure is in place to include:
-- Specific build and test commands
-- Project architecture and key components
-- Development workflow and conventions
-- Any custom scripts or build phases
+- SwiftUI-based application with declarative UI
+- Uses Swift Testing framework (not XCTest) for unit tests
+- Standard iOS app lifecycle with `@main` App struct
+- Preview support enabled for SwiftUI components
