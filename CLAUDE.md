@@ -12,7 +12,6 @@ This is an iOS clock app called "tick" built with SwiftUI. The app displays the 
 - **Xcode**: 16.4 (Build version 16F6)
 - **Swift**: 6.1.2 (Project uses Swift 6.0)
 - **iOS Deployment Target**: 18.5
-- **macOS Deployment Target**: 15.5
 - **visionOS Deployment Target**: 2.5
 
 ## Development Commands
