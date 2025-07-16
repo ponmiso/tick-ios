@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var currentTime = Date()
+    @StateObject private var orientationManager = OrientationManager()
     
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -14,6 +15,15 @@ struct ContentView: View {
             Text(currentTime.formatted(.dateTime.year().month().day()))
                 .font(.system(size: 18, weight: .medium))
                 .foregroundStyle(.secondary)
+            
+            Button(action: {
+                orientationManager.rotate()
+            }) {
+                Image(systemName: "arrow.clockwise")
+                    .font(.system(size: 24, weight: .medium))
+                    .foregroundColor(.blue)
+            }
+            .padding(.top, 20)
         }
         .padding()
         .onReceive(timer) { time in

@@ -6,5 +6,6 @@ struct tickApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizability(.contentSize)
     }
 }
