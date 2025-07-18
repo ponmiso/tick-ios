@@ -4,7 +4,6 @@ import SwiftUI
 @main
 struct TickWidgetBundle: WidgetBundle {
     var body: some Widget {
-        TickWidget()
         TickWidgetControl()
     }
 }
