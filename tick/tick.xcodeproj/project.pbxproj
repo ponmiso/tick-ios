@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		84F405C82E2A3E880034978E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F405C72E2A3E880034978E /* WidgetKit.framework */; };
+		84F405CA2E2A3E880034978E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F405C92E2A3E880034978E /* SwiftUI.framework */; };
+		84F405D92E2A3E890034978E /* TickWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 84F405C52E2A3E880034978E /* TickWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		84A0909A2E2646C4008BE278 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +27,36 @@
 			remoteGlobalIDString = 84A0908A2E2646C3008BE278;
 			remoteInfo = tick;
 		};
+		84F405D72E2A3E890034978E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84A090832E2646C3008BE278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F405C42E2A3E880034978E;
+			remoteInfo = TickWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84F405DA2E2A3E890034978E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84F405D92E2A3E890034978E /* TickWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84A0908B2E2646C3008BE278 /* tick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A090992E2646C4008BE278 /* tickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A090A32E2646C4008BE278 /* tickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F405C52E2A3E880034978E /* TickWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TickWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F405C72E2A3E880034978E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		84F405C92E2A3E880034978E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +66,13 @@
 				Info.plist,
 			);
 			target = 84A0908A2E2646C3008BE278 /* tick */;
+		};
+		84F405DE2E2A3E890034978E /* Exceptions for "TickWidget" folder in "TickWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 84F405C42E2A3E880034978E /* TickWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -56,6 +93,14 @@
 		84A090A62E2646C4008BE278 /* tickUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = tickUITests;
+			sourceTree = "<group>";
+		};
+		84F405CB2E2A3E880034978E /* TickWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				84F405DE2E2A3E890034978E /* Exceptions for "TickWidget" folder in "TickWidgetExtension" target */,
+			);
+			path = TickWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -82,6 +127,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F405C22E2A3E880034978E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F405CA2E2A3E880034978E /* SwiftUI.framework in Frameworks */,
+				84F405C82E2A3E880034978E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +145,8 @@
 				84A0908D2E2646C3008BE278 /* tick */,
 				84A0909C2E2646C4008BE278 /* tickTests */,
 				84A090A62E2646C4008BE278 /* tickUITests */,
+				84F405CB2E2A3E880034978E /* TickWidget */,
+				84F405C62E2A3E880034978E /* Frameworks */,
 				84A0908C2E2646C3008BE278 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,8 +157,18 @@
 				84A0908B2E2646C3008BE278 /* tick.app */,
 				84A090992E2646C4008BE278 /* tickTests.xctest */,
 				84A090A32E2646C4008BE278 /* tickUITests.xctest */,
+				84F405C52E2A3E880034978E /* TickWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		84F405C62E2A3E880034978E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F405C72E2A3E880034978E /* WidgetKit.framework */,
+				84F405C92E2A3E880034978E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,10 +181,12 @@
 				84A090872E2646C3008BE278 /* Sources */,
 				84A090882E2646C3008BE278 /* Frameworks */,
 				84A090892E2646C3008BE278 /* Resources */,
+				84F405DA2E2A3E890034978E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84F405D82E2A3E890034978E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				84A0908D2E2646C3008BE278 /* tick */,
@@ -176,6 +244,28 @@
 			productReference = 84A090A32E2646C4008BE278 /* tickUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		84F405C42E2A3E880034978E /* TickWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F405DD2E2A3E890034978E /* Build configuration list for PBXNativeTarget "TickWidgetExtension" */;
+			buildPhases = (
+				84F405C12E2A3E880034978E /* Sources */,
+				84F405C22E2A3E880034978E /* Frameworks */,
+				84F405C32E2A3E880034978E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				84F405CB2E2A3E880034978E /* TickWidget */,
+			);
+			name = TickWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TickWidgetExtension;
+			productReference = 84F405C52E2A3E880034978E /* TickWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +287,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 84A0908A2E2646C3008BE278;
 					};
+					84F405C42E2A3E880034978E = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 84A090862E2646C3008BE278 /* Build configuration list for PBXProject "tick" */;
@@ -216,6 +309,7 @@
 				84A0908A2E2646C3008BE278 /* tick */,
 				84A090982E2646C4008BE278 /* tickTests */,
 				84A090A22E2646C4008BE278 /* tickUITests */,
+				84F405C42E2A3E880034978E /* TickWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +330,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		84A090A12E2646C4008BE278 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F405C32E2A3E880034978E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,6 +367,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F405C12E2A3E880034978E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -278,6 +386,11 @@
 			isa = PBXTargetDependency;
 			target = 84A0908A2E2646C3008BE278 /* tick */;
 			targetProxy = 84A090A42E2646C4008BE278 /* PBXContainerItemProxy */;
+		};
+		84F405D82E2A3E890034978E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F405C42E2A3E880034978E /* TickWidgetExtension */;
+			targetProxy = 84F405D72E2A3E890034978E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -570,6 +683,63 @@
 			};
 			name = Release;
 		};
+		84F405DB2E2A3E890034978E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C4U6UTP2K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TickWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TickWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ponmiso.tick.TickWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F405DC2E2A3E890034978E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C4U6UTP2K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TickWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TickWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ponmiso.tick.TickWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,6 +775,15 @@
 			buildConfigurations = (
 				84A090B42E2646C4008BE278 /* Debug */,
 				84A090B52E2646C4008BE278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F405DD2E2A3E890034978E /* Build configuration list for PBXNativeTarget "TickWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F405DB2E2A3E890034978E /* Debug */,
+				84F405DC2E2A3E890034978E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
