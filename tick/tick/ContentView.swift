@@ -9,13 +9,22 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 20) {
             Text(currentTime.formatted(.dateTime.hour().minute().second()))
-                .font(.system(size: 48, weight: .bold, design: .monospaced))
+                .font(
+                    // 最大のシステムフォントサイズである512ptを使用
+                    .system(
+                        size: 512,
+                        weight: .bold,
+                        design: .monospaced
+                    )
+                )
+                .lineLimit(1)
+                .minimumScaleFactor(0.01)
                 .foregroundStyle(.primary)
-            
+
             Text(currentTime.formatted(.dateTime.year().month().day()))
                 .font(.system(size: 18, weight: .medium))
                 .foregroundStyle(.secondary)
-            
+
             Button(action: {
                 orientationManager.rotate()
             }) {
@@ -26,6 +35,7 @@ struct ContentView: View {
             .padding(.top, 20)
         }
         .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .onReceive(timer) { time in
             currentTime = time
         }
